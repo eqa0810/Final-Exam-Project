@@ -16,7 +16,7 @@ This application allows users to search for public holidays by year and state co
 [Holiday Finder Demo](...)
 
 ### APIs Information:
-- [Public Holidays API]([https://rapidapi.com/public-holidays7/api/public-holidays/](https://rapidapi.com/hefesto-technologies-hefesto-technologies-default/api/public-holidays7))
+- [Public Holidays API](https://rapidapi.com/hefesto-technologies-hefesto-technologies-default/api/public-holidays7)
 
 ### Contact Email:
 qiyuan@umd.edu
