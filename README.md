@@ -10,7 +10,7 @@ Qiyu An (directory id: qiyuan)
 This application allows users to search for public holidays by year and state code, view the results, and leave public comments.
 
 ### Deployment Link:
-[Holiday Finder Live]([https://your-app.onrender.com](https://final-exam-project-cmsc335-emilyan.onrender.com))
+[Holiday Finder Live](https://final-exam-project-cmsc335-emilyan.onrender.com/)
 
 ### YouTube Video Demo Link:
 [Holiday Finder Demo](...)
