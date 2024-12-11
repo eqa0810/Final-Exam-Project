@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Holiday Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Holiday Finder</h1>
+  <form action="/holidays" method="get">
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year" required>
+    <label for="stateCode">State Code:</label>
+    <input type="text" id="stateCode" name="stateCode" required>
+    <button type="submit">Find Holidays</button>
+  </form>
+
+  <h2>Public Comments</h2>
+  <% if (comments.length > 0) { %>
+    <ul>
+      <% comments.forEach((comment) => { %>
+        <li><strong><%= comment.username %>:</strong> <%= comment.comment %></li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No comments yet. Comments will be displayed here.</p>
+  <% } %>
+</body>
+</html>

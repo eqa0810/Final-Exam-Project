@@ -1,0 +1,21 @@
+{
+  "name": "holiday-finder",
+  "version": "1.0.0",
+  "description": "A Node.js application to find public holidays and add comments.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["holidays", "API", "comments", "nodejs", "mongodb", "express"],
+  "author": "Emily Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongodb": "^6.11.0"
+  }
+}

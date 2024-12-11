@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Holiday Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    p {
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #0150a5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Holidays for <%= year %>, <%= stateCode %></h1>
+
+  <ul>
+    <% holidays.forEach((holiday) => { %>
+      <li><strong><%= holiday.date %>:</strong> <%= holiday.localName %> (<%= holiday.name %>)</li>
+    <% }); %>
+  </ul>
+
+  <h2>Add a Comment</h2>
+  <form action="/addComment" method="post">
+    <input type="hidden" name="year" value="<%= year %>">
+    <input type="hidden" name="stateCode" value="<%= stateCode %>">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="comment">Comment:</label>
+    <input type="text" id="comment" name="comment" required>
+    <button type="submit">Add Comment</button>
+  </form>
+
+  <!-- Success message -->
+  <% if (message) { %>
+    <p style="color: black; font-weight: bold; margin-top: 20px;"><%= message %></p>
+  <% } %>
+
+  <a href="/">Home</a>
+</body>
+</html>
